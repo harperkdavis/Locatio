@@ -1,3 +1,21 @@
 {
-
+  "theChance": 0.2,
+  "lastChance": 0.5,
+  "global" : {
+    "firsts" : [
+      "bruh"
+    ],
+    "lasts" : [
+      "moment"
+    ]
+  },
+  "ridge" : {
+    "firsts" : [
+      "bear",
+      "bird"
+    ],
+    "lasts" : [
+      "tooth"
+    ]
+  }
 }
