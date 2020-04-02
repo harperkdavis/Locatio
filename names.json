@@ -1,21 +1,31 @@
 {
   "theChance": 0.2,
+  "noPlaceTypeChance": 0.05,
   "lastChance": 0.5,
   "global" : {
     "firsts" : [
-      "bruh"
+      "laurel",
+      "cotton",
+      "oak",
+      "alder",
+      "cedar",
+      "ash",
+      "spruce",
+      "birch",
+      "twin",
+      "tri",
+      "two",
+      "one",
+      "pine",
+      "kings",
+      "stafford",
+      "woods",
+      "hark",
+      "shale",
+      "storm"
     ],
     "lasts" : [
-      "moment"
-    ]
-  },
-  "ridge" : {
-    "firsts" : [
-      "bear",
-      "bird"
-    ],
-    "lasts" : [
-      "tooth"
+      "pelt"
     ]
   }
 }

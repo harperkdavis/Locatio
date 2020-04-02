@@ -4,14 +4,27 @@ from staticon import Level, sprint
 with open('names.json') as f:
     names = json.load(f)
 
+
 def generate_name(loc):
-    first = names[loc]['firsts'] + names['global']['firsts']
-    last = names[loc]['lasts'] + names['global']['lasts']
+    first = names['global']['firsts']
+    last = names['global']['lasts']
+    if loc in names:
+        first += names[loc]['firsts']
+        last += names[loc]['lasts']
     location_name = random.choice(first)
     if random.random() < names['lastChance']:
         location_name += random.choice(last)
-    return location_name + ' ' + loc
+    if random.random() < names['theChance']:
+        location_name = 'the ' + location_name
+    if random.random() < names['noPlaceTypeChance']:
+        return location_name
+    else:
+        return location_name + ' ' + loc
 
 
 if __name__ == '__main__':
-    print(generate_name('ridge').title())
+    sprint(Level.INFO, generate_name('ridge').title())
+    sprint(Level.INFO, generate_name('peak').title())
+    sprint(Level.INFO, generate_name('woods').title())
+    sprint(Level.INFO, generate_name('base').title())
+    sprint(Level.INFO, generate_name('hills').title())
