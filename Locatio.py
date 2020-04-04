@@ -12,11 +12,13 @@ def generate_name(loc):
         first += names[loc]['firsts']
         last += names[loc]['lasts']
     location_name = random.choice(first)
-    if random.random() < names['lastChance']:
+    if random.random() < names['config']['commonNameChance']:
+        location_name = random.choice(names['names'])
+    if random.random() < names['config']['lastChance']:
         location_name += random.choice(last)
-    if random.random() < names['theChance']:
+    if random.random() < names['config']['theChance']:
         location_name = 'the ' + location_name
-    if random.random() < names['noPlaceTypeChance']:
+    if random.random() < names['config']['noPlaceTypeChance']:
         return location_name
     else:
         return location_name + ' ' + loc
