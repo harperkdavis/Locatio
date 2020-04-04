@@ -1,7 +1,7 @@
 {
   "config" : {
     "theChance": 0.2,
-    "noPlaceTypeChance": 0.05,
+    "placeTypeChance": 0.05,
     "lastChance": 0.5,
     "commonNameChance": 0.2
   },
@@ -27,7 +27,7 @@
       "storm",
       "dirt"
     ],
-    "lasts" : [
+    "lasts": [
       "pelt",
       "hill",
       "man",
