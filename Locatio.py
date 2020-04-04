@@ -10,15 +10,19 @@ def generateName(category):
     if category in names:
         firsts += names[category]['firsts']
         lasts += names[category]['lasts']
-    locationName = random.choice(firsts)
+
     if random.random() < names['config']['commonNameChance']:
         locationName = random.choice(names['names'])
+    else:
+        locationName = random.choice(firsts)
+
     if random.random() < names['config']['lastChance']:
         locationName += f' {random.choice(lasts)}'
     if random.random() < names['config']['theChance']:
         locationName = f'the {locationName}'
     if random.random() < names['config']['placeTypeChance']:
         locationName += f' {category}'
+
     return locationName.title()
 
 if __name__ == '__main__':
